@@ -44,10 +44,10 @@ const AboutSection = () => {
     <section className="text-white mt-8">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:py-16">
         <Image
-          src={"/images/About-Image.jpg"}
+          src={"/images/About-Image-removebg-transformed.png"}
           alt="About Image"
-          width={500}
-          height={500}
+          width={700}
+          height={700}
         />
 
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
