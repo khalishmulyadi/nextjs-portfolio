@@ -3,32 +3,70 @@ import Image from "next/image";
 import React, { useTransition, useState } from "react";
 import TabButton from "./TabButton";
 
-
 const TAB_DATA = [
-    {
-        title: "Skills",
-        id: "skills",
-        content: (
-            <p>My skills</p>
-        ),
-    },
+  {
+    title: "Skills",
+    id: "skills",
+    content: (
+      <ul className="list-disc pl-2">
+        <li>HTML, CSS, JS</li>
+        <li>React.js,Next.js</li>
+        <li>MySQL, Oracle</li>
+        <li>Tailwind.css, Bootstrap</li>
+        <li>Shopify, WordPress</li>
+        <li>System Analysis and Design</li>
+      </ul>
+    ),
+  },
 
-    {
-        title: "Education",
-        id: "education",
-        content: (
-            <p>My education</p>
-        ),
-    },
+  {
+    title: "Education",
+    id: "education",
+    content: (
+      <ul className="list-disc pl-2">
+        <li className="mb-4">
+          <strong>Gunadarma University | 2018 - 2023</strong>
+          <p>Bachelor&apos;s of Computer Science</p>
+          <p>GPA: 375/4.00</p>
+        </li>
+        <li className="mb-4">
+          <strong>SMAN 1 Cigombong | 2015 - 2018</strong>
+          <p>High School Diploma</p>
+          <p>Math and Science</p>
+        </li>
+      </ul>
+    ),
+  },
 
-    {
-        title: "Experience",
-        id: "experience",
-        content: (
-            <p>My experience</p>
-        ),
-    },
-]
+  {
+    title: "Certifications",
+    id: "certifications",
+    content: (
+      <ul className="list-disc pl-2">
+        <li className="mb-4">
+          <a 
+            href="https://www.linkedin.com/in/mochammad-khalish-mulyadi/overlay/1635498020726/single-media-viewer/?profileId=ACoAADHc1gEB3tlr5uyErqMAqort2skyRZ8WDIo"
+            target="_blank"
+            className="underline"
+          >
+            <strong>Front-End JavaScript Wave 2 | Jul 2022 - Present</strong>
+          </a>
+          <p>Binar Academy X Kampus Merdeka</p>
+        </li>
+        <li className="mb-4">
+          <a 
+            href="https://www.linkedin.com/in/mochammad-khalish-mulyadi/"
+            target="_blank"
+            className="underline"
+          >
+            <strong>Oracle for Intermediate | Feb 2021 - Present</strong>
+          </a>
+          <p>LePKom Gunadarma University</p>
+        </li>
+      </ul>
+    ),
+  },
+];
 
 const AboutSection = () => {
   const [tab, setTab] = useState("skills");
@@ -61,7 +99,7 @@ const AboutSection = () => {
             I&apos;m good at, so I love to learn and work with others to create
             more amazing apps.
           </p>
-          <div className="flex flex-row justify-start mt-8">
+          <div className="flex flex-row justify-start gap-4 mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
@@ -73,12 +111,14 @@ const AboutSection = () => {
               buttonTitle={"Education"}
             />
             <TabButton
-              selectTab={() => handleTabChange("experience")}
-              active={tab === "experience"}
-              buttonTitle={"Experience"}
+              selectTab={() => handleTabChange("certifications")}
+              active={tab === "certifications"}
+              buttonTitle={"Certifications"}
             />
           </div>
-          <div className="mt-8">{TAB_DATA.find((t) => t.id === tab).content}</div>
+          <div className="mt-8">
+            {TAB_DATA.find((t) => t.id === tab).content}
+          </div>
         </div>
       </div>
     </section>

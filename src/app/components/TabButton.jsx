@@ -2,7 +2,7 @@ import React from "react";
 
 const TabButton = ({ active, selectTab, buttonTitle }) => {
   const buttonClasses = active
-    ? "text-white border-b-[3px] border-[#153b50]"
+    ? "text-white border-b-[3px] border-tertiary"
     : "text-white";
 
   return (
