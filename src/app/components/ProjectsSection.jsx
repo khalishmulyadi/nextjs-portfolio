@@ -1,7 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
+import { motion, useInView } from "framer-motion";
+
+
 
 const projectData = [
   {
@@ -19,21 +22,21 @@ const projectData = [
     tag: ["All", "Web"],
   },
   {
-    id: 1,
+    id: 3,
     title: "Project 3 title",
     description: "Project 3 description",
     image: "/images/projects/project-mb.png",
     tag: ["All", "Web"],
   },
   {
-    id: 1,
+    id: 4,
     title: "Project 4 title",
     description: "Project 1 description",
     image: "/images/projects/project-mb.png",
     tag: ["All", "Web"],
   },
   {
-    id: 1,
+    id: 5,
     title: "Project 5 title",
     description: "Project 1 description",
     image: "/images/projects/project-mb.png",
@@ -43,6 +46,8 @@ const projectData = [
 
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   const handleTagChange = (newTag) => {
     setTag(newTag);
@@ -51,6 +56,11 @@ const ProjectsSection = () => {
   const filteredProjects = projectData.filter((project) =>
     project.tag.includes(tag)
   );
+
+  const cardVariants = {
+    initial: { y: 50, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+  };
 
   return (
     <section>
@@ -74,16 +84,24 @@ const ProjectsSection = () => {
           isSelected={tag === "Mobile"}
         />
       </div>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 md:gap-12">
-        {filteredProjects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            imgUrl={project.image}
-            projectTitle={project.title}
-            projectDescription={project.description}
-          />
+      <ul ref={ref} className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 md:gap-12">
+        {filteredProjects.map((project, index) => (
+          <motion.li
+            key={index}
+            variants={cardVariants}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            transition={{ duration: 0.3, delay: index * 0.4 }}
+          >
+            <ProjectCard
+              key={project.id}
+              imgUrl={project.image}
+              projectTitle={project.title}
+              projectDescription={project.description}
+            />
+          </motion.li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 };

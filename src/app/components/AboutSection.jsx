@@ -80,7 +80,7 @@ const AboutSection = () => {
 
   return (
     <section className="text-white mt-8">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:py-16">
+      <div className="md:grid md:grid-cols-2 gap-8 items-center py-4 px-4 xl:gap-16 sm:py-8">
         <Image
           src={"/images/About-Image-removebg-transformed.png"}
           alt="About Image"
@@ -99,7 +99,7 @@ const AboutSection = () => {
             I&apos;m good at, so I love to learn and work with others to create
             more amazing apps.
           </p>
-          <div className="flex flex-row justify-start gap-4 mt-8">
+          <div className="flex flex-row justify-start gap-4 mt-8 overflow-scroll sm:overflow-auto">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}

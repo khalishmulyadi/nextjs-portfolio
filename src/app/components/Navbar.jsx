@@ -4,6 +4,9 @@ import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import Image from "next/image";
+import KHLogo from "../../../public/images/Logo-KH-bg-dark.png"
+
 
 const navLinks = [
   {
@@ -25,12 +28,12 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-10 bg-mainBg bg-opacity-90 backdrop-blur-sm">
-      <div className="flex flex-wrap items-center justify-between mx-auto py-4 px-12">
+      <div className="flex flex-wrap items-center justify-between mx-auto py-4 px-4 sm:px-12">
         <Link
           href={"/"}
-          className="text-2xl md:text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-secondary via-tertiary to-white"
+          className=""
         >
-          LOGO
+          <Image src={KHLogo} alt="logo" className="w-14 md:w-20" />
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
