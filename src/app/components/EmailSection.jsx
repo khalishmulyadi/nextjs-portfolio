@@ -45,10 +45,10 @@ const EmailSection = () => {
           get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="">
+          <Link href="https://github.com/khalishmulyadi">
             <Image className="w-7" src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="">
+          <Link href="https://www.linkedin.com/in/mochammad-khalish-mulyadi/">
             <Image className="w-7" src={LinkedInIcon} alt="LinkedIn Icon" />
           </Link>
         </div>
@@ -95,7 +95,7 @@ const EmailSection = () => {
               htmlFor="message"
               className="text-white block mb-2 text-sm font-medium"
             >
-              Subject
+              Message
             </label>
             <textarea
               name="message"

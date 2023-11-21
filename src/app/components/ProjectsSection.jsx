@@ -9,37 +9,51 @@ import { motion, useInView } from "framer-motion";
 const projectData = [
   {
     id: 1,
-    title: "Project 1 title",
-    description: "Project 1 description",
-    image: "/images/projects/project-mb.png",
+    title: "Second-Hand Online Store",
+    description: "Second-Hand Online Store project using React.js",
+    image: "/images/projects/project-binar.png",
+    url: "https://fejs6-kel6.vercel.app/",
+    repoUrl: "https://github.com/khalishmulyadi/fejs6-kel6",
     tag: ["All", "Web"],
   },
   {
     id: 2,
-    title: "Project 2 title",
-    description: "Project 2 description",
-    image: "/images/projects/project-mb.png",
+    title: "Employee Management Dashboard",
+    description: "Employee management dashboard app using Angular and Material UI",
+    image: "/images/projects/project-employee-management-dashboard.png",
+    repoUrl: "https://github.com/khalishmulyadi/employee-management-dashboard",
     tag: ["All", "Web"],
   },
   {
     id: 3,
-    title: "Project 3 title",
-    description: "Project 3 description",
-    image: "/images/projects/project-mb.png",
+    title: "Employee API",
+    description: "Employee API using Node.js and MySQL",
+    image: "/images/projects/project-employee-api.png",
+    repoUrl: "https://github.com/khalishmulyadi/employee-api",
     tag: ["All", "Web"],
   },
   {
     id: 4,
-    title: "Project 4 title",
-    description: "Project 1 description",
-    image: "/images/projects/project-mb.png",
+    title: "Artdigest.co",
+    description: "Artdigest.co. Unique home decor website.",
+    image: "/images/projects/project-artdigest.png",
+    url: "https://artdigest.co/",
     tag: ["All", "Web"],
   },
   {
     id: 5,
-    title: "Project 5 title",
-    description: "Project 1 description",
+    title: "Million Bloom",
+    description: "Million Bloom website. Online flower shop",
+    url: "https://millionbloom.com/",
     image: "/images/projects/project-mb.png",
+    tag: ["All", "Web"],
+  },
+  {
+    id: 6,
+    title: "Enigwatch",
+    description: "Enigwatch website. Watch winder online store",
+    image: "/images/projects/project-enigwatch.png",
+    url: "https://enigwatch.com/",
     tag: ["All", "Web"],
   },
 ];
@@ -65,7 +79,7 @@ const ProjectsSection = () => {
   return (
     <section>
       <h2 className="text-center text-4xl font-bold text-white my-7">
-        My Works and Projects
+        Some of My Works and Projects
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
@@ -94,10 +108,12 @@ const ProjectsSection = () => {
             transition={{ duration: 0.3, delay: index * 0.4 }}
           >
             <ProjectCard
-              key={project.id}
-              imgUrl={project.image}
-              projectTitle={project.title}
-              projectDescription={project.description}
+              key={project?.id}
+              imgUrl={project?.image}
+              projectTitle={project?.title}
+              projectDescription={project?.description}
+              projectUrl={project?.url}
+              projectRepoUrl={project?.repoUrl}
             />
           </motion.li>
         ))}
