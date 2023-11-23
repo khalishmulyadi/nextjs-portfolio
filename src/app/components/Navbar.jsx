@@ -33,7 +33,7 @@ const Navbar = () => {
           href={"/"}
           className=""
         >
-          <Image src={KHLogo} alt="logo" className="w-14 md:w-20" />
+          <Image src={KHLogo} alt="logo" className="w-14 md:w-20" priority={true} />
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (

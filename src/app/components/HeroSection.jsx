@@ -15,13 +15,13 @@ const HeroSection = () => {
           transition={{ duration: 0.7 }}
           className="col-span-7 place-self-center text-center sm:text-left"
         >
-          <h1 className="text-transparent leading-loose bg-clip-text bg-gradient-to-r from-secondary via-tertiary to-white text-4xl/tight sm:text-5xl/tight lg:text-6xl/tight font-extrabold">
+          <h1 className="text-transparent leading-normal bg-clip-text bg-gradient-to-r from-secondary via-tertiary to-white text-4xl/none sm:text-5xl/none lg:text-6xl/tight font-extrabold">
             <span className="text-white">Hello, I&apos;m{""} </span>
             <br></br>
             <TypeAnimation
               sequence={[
                 // Same substring at the start will only be typed out once, initially
-                "Khalish",
+                "Khalish Mulyadi",
                 1000, // wait 1s before replacing "Mice" with "Hamsters"
                 "a Front-End Developer",
                 1000,
@@ -67,6 +67,7 @@ const HeroSection = () => {
               alt="dev-profile"
               height={700}
               width={700}
+              priority={true}
             />
           </div>
         </motion.div>
