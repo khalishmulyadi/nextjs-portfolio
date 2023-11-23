@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer text-white border border-t-[#33353F] border-x-transparent border-b-transparent">
         <div className="p-4 sm:px-12 flex items-center justify-between">
             <span>
-              <Image src={LogoKH} alt="Logo" className="w-10" />
+              <Image src={LogoKH} alt="Logo" className="w-10" priority={true} />
             </span>
             <p className="text-white">All rights reserved.</p>
         </div>

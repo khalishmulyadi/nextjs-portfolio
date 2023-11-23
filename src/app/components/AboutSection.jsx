@@ -28,8 +28,8 @@ const AboutSection = () => {
       id: "skills",
       content: (
         <ul className="list-disc pl-2">
-          <li>HTML, CSS, JS</li>
-          <li>React.js,Next.js</li>
+          <li>HTML, CSS, JS, PHP</li>
+          <li>React.js, Next.js</li>
           <li>MySQL, Oracle</li>
           <li>Tailwind.css, Bootstrap</li>
           <li>Shopify, WordPress</li>
@@ -44,9 +44,9 @@ const AboutSection = () => {
       content: (
         <ul className="list-disc pl-2">
           <li className="mb-4">
-            <strong>Gunadarma University | 2018 - 2023</strong>
+            <strong>Gunadarma University | 2018 - 2022</strong>
             <p>Bachelor&apos;s of Computer Science</p>
-            <p>GPA: 375/4.00</p>
+            <p>GPA: 3.75/4.00</p>
           </li>
           <li className="mb-4">
             <strong>SMAN 1 Cigombong | 2015 - 2018</strong>
@@ -70,8 +70,20 @@ const AboutSection = () => {
             >
               <strong>Front-End JavaScript Wave 2 | Jul 2022 - Present</strong>
             </a>
-            <p>Binar Academy X Kampus Merdeka</p>
+            <p>Binar Academy and Kampus Merdeka</p>
           </li>
+
+          <li className="mb-4">
+            <a
+              href="https://courses.nvidia.com/certificates/5d6d75ae159547a69de5697d470f5fa8/"
+              target="_blank"
+              className="underline"
+            >
+              <strong>Getting Started with Deep Learning | December 2021 - Present</strong>
+            </a>
+            <p>NVIDIA Deep Learning Institute</p>
+          </li>
+          
           <li className="mb-4">
             <a
               href="https://www.linkedin.com/in/mochammad-khalish-mulyadi/"
