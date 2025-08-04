@@ -46,7 +46,7 @@ const HeroSection = () => {
                 Hire Me
               </button>
             </Link>
-            <Link href="https://drive.google.com/uc?export=download&id=1-J0NJMWufpL8-AnvEkwyWu9i0Io5O7eE">
+            <Link href="https://drive.google.com/uc?export=download&id=1RdQdy0ztAFnw84JWqo1lnvt5RXNh7i_8">
               <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-secondary hover:opacity-80 text-white">
                 <span className="block bg-mainBg rounded-full px-5 py-2">
                   Download Resume
